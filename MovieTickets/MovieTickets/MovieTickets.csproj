@@ -20,6 +20,8 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -223,6 +225,24 @@
   <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MovieTickets.Dependency\MovieTickets.Dependency.csproj">
+      <Project>{fd365867-aa58-46bb-9397-1cb142ee1ff1}</Project>
+      <Name>MovieTickets.Dependency</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MovieTickets.Entities\MovieTickets.Entities.csproj">
+      <Project>{86f48786-823d-4f7f-b621-fde8d915a208}</Project>
+      <Name>MovieTickets.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MovieTickets.IBLL\MovieTickets.IBLL.csproj">
+      <Project>{77a8969d-9adb-4d2a-83b0-b2ea9c74478a}</Project>
+      <Name>MovieTickets.IBLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MovieTickets.IDAL\MovieTickets.IDAL.csproj">
+      <Project>{c40dd980-e074-414a-90d5-42137430ceac}</Project>
+      <Name>MovieTickets.IDAL</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -251,6 +271,7 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

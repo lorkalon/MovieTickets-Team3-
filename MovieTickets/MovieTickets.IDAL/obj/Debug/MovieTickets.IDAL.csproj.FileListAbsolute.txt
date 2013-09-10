@@ -1,0 +1,7 @@
+D:\itechart.dotnetlab\Team3\MovieTickets\MovieTickets.IDAL\bin\Debug\MovieTickets.IDAL.dll
+D:\itechart.dotnetlab\Team3\MovieTickets\MovieTickets.IDAL\bin\Debug\MovieTickets.IDAL.pdb
+D:\itechart.dotnetlab\Team3\MovieTickets\MovieTickets.IDAL\bin\Debug\MovieTickets.Entities.dll
+D:\itechart.dotnetlab\Team3\MovieTickets\MovieTickets.IDAL\bin\Debug\MovieTickets.Entities.pdb
+D:\itechart.dotnetlab\Team3\MovieTickets\MovieTickets.IDAL\obj\Debug\MovieTickets.IDAL.csprojResolveAssemblyReference.cache
+D:\itechart.dotnetlab\Team3\MovieTickets\MovieTickets.IDAL\obj\Debug\MovieTickets.IDAL.dll
+D:\itechart.dotnetlab\Team3\MovieTickets\MovieTickets.IDAL\obj\Debug\MovieTickets.IDAL.pdb

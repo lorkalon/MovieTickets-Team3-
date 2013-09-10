@@ -1,0 +1,13 @@
+D:\itechart.dotnetlab\Team3\MovieTickets\MovieTickets.DAL\bin\Debug\MovieTickets.DAL.dll.config
+D:\itechart.dotnetlab\Team3\MovieTickets\MovieTickets.DAL\bin\Debug\MovieTickets.DAL.dll
+D:\itechart.dotnetlab\Team3\MovieTickets\MovieTickets.DAL\bin\Debug\MovieTickets.DAL.pdb
+D:\itechart.dotnetlab\Team3\MovieTickets\MovieTickets.DAL\bin\Debug\EntityFramework.dll
+D:\itechart.dotnetlab\Team3\MovieTickets\MovieTickets.DAL\bin\Debug\MovieTickets.Entities.dll
+D:\itechart.dotnetlab\Team3\MovieTickets\MovieTickets.DAL\bin\Debug\MovieTickets.IDAL.dll
+D:\itechart.dotnetlab\Team3\MovieTickets\MovieTickets.DAL\bin\Debug\MovieTickets.Entities.pdb
+D:\itechart.dotnetlab\Team3\MovieTickets\MovieTickets.DAL\bin\Debug\MovieTickets.IDAL.pdb
+D:\itechart.dotnetlab\Team3\MovieTickets\MovieTickets.DAL\bin\Debug\EntityFramework.xml
+D:\itechart.dotnetlab\Team3\MovieTickets\MovieTickets.DAL\bin\Debug\ru\EntityFramework.resources.dll
+D:\itechart.dotnetlab\Team3\MovieTickets\MovieTickets.DAL\obj\Debug\MovieTickets.DAL.csprojResolveAssemblyReference.cache
+D:\itechart.dotnetlab\Team3\MovieTickets\MovieTickets.DAL\obj\Debug\MovieTickets.DAL.dll
+D:\itechart.dotnetlab\Team3\MovieTickets\MovieTickets.DAL\obj\Debug\MovieTickets.DAL.pdb

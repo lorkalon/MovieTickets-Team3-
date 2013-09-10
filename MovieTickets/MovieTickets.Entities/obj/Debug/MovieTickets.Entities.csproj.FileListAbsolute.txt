@@ -1,0 +1,4 @@
+D:\itechart.dotnetlab\Team3\MovieTickets\MovieTickets.Entities\bin\Debug\MovieTickets.Entities.dll
+D:\itechart.dotnetlab\Team3\MovieTickets\MovieTickets.Entities\bin\Debug\MovieTickets.Entities.pdb
+D:\itechart.dotnetlab\Team3\MovieTickets\MovieTickets.Entities\obj\Debug\MovieTickets.Entities.dll
+D:\itechart.dotnetlab\Team3\MovieTickets\MovieTickets.Entities\obj\Debug\MovieTickets.Entities.pdb

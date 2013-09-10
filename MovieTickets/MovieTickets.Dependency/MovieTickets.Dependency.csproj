@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FD365867-AA58-46BB-9397-1CB142EE1FF1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MovieTickets.Dependency</RootNamespace>
+    <AssemblyName>MovieTickets.Dependency</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MovieTickets.BLL\MovieTickets.BLL.csproj">
+      <Project>{6d70b2ba-a612-48a0-be29-5024c0eb9987}</Project>
+      <Name>MovieTickets.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MovieTickets.DAL\MovieTickets.DAL.csproj">
+      <Project>{6bc172fd-a845-443c-afa8-3c361be900fd}</Project>
+      <Name>MovieTickets.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MovieTickets.Entities\MovieTickets.Entities.csproj">
+      <Project>{86f48786-823d-4f7f-b621-fde8d915a208}</Project>
+      <Name>MovieTickets.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MovieTickets.IBLL\MovieTickets.IBLL.csproj">
+      <Project>{77a8969d-9adb-4d2a-83b0-b2ea9c74478a}</Project>
+      <Name>MovieTickets.IBLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MovieTickets.IDAL\MovieTickets.IDAL.csproj">
+      <Project>{c40dd980-e074-414a-90d5-42137430ceac}</Project>
+      <Name>MovieTickets.IDAL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

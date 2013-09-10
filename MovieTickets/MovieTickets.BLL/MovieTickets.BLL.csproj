@@ -41,6 +41,16 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MovieTickets.Entities\MovieTickets.Entities.csproj">
+      <Project>{86f48786-823d-4f7f-b621-fde8d915a208}</Project>
+      <Name>MovieTickets.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MovieTickets.IBLL\MovieTickets.IBLL.csproj">
+      <Project>{77a8969d-9adb-4d2a-83b0-b2ea9c74478a}</Project>
+      <Name>MovieTickets.IBLL</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
