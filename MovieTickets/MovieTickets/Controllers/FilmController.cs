@@ -12,23 +12,23 @@ namespace MovieTickets.Controllers
         /// 
         /// Public actions
         /// 
-
+        private int _pageSize = 10;
         public ActionResult Index()
         {
             return View();
         }
 
-        public ActionResult ListOfFilms()
+        public ActionResult ListOfFilms(int page)
         {
             return View();
         }
 
-        public ActionResult FilmDetails()
+        public ActionResult FilmDetails(int filmId)
         {
             return View();
         }
 
-        public ActionResult ShowReviews()
+        public ActionResult ShowReviews(int filmId)
         {
             return View();
         }
@@ -41,20 +41,20 @@ namespace MovieTickets.Controllers
         ///
         ///Actions for authorized users
         ///
-        /// 
-        [Authorize(Roles = "User, Administrator, Moderator")]
-        public ActionResult RateFilm()
+
+        [Authorize]
+        public ActionResult RateFilm(int filmId, int rating)
         {
             return View();
         }
 
-        [Authorize(Roles = "User, Administrator, Moderator")]
-        public ActionResult ReviewFilm()
+        [Authorize]
+        public ActionResult ReviewFilm(int filmId, string reviewContent)
         {
             return View();
         }
 
-        [Authorize(Roles = "User, Administrator, Moderator")]
+        [Authorize]
         public ActionResult RemoveReview()
         {
             return View();

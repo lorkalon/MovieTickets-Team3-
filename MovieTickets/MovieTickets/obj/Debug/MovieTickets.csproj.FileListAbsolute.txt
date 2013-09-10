@@ -48,3 +48,10 @@ D:\itechart.dotnetlab\Team3\MovieTickets\MovieTickets\bin\ru\System.Web.WebPages
 D:\itechart.dotnetlab\Team3\MovieTickets\MovieTickets\obj\Debug\MovieTickets.csprojResolveAssemblyReference.cache
 D:\itechart.dotnetlab\Team3\MovieTickets\MovieTickets\obj\Debug\MovieTickets.dll
 D:\itechart.dotnetlab\Team3\MovieTickets\MovieTickets\obj\Debug\MovieTickets.pdb
+D:\itechart.dotnetlab\Team3\MovieTickets\MovieTickets\bin\Ninject.dll
+D:\itechart.dotnetlab\Team3\MovieTickets\MovieTickets\bin\Ninject.Web.Common.dll
+D:\itechart.dotnetlab\Team3\MovieTickets\MovieTickets\bin\WebActivator.dll
+D:\itechart.dotnetlab\Team3\MovieTickets\MovieTickets\bin\Ninject.pdb
+D:\itechart.dotnetlab\Team3\MovieTickets\MovieTickets\bin\Ninject.xml
+D:\itechart.dotnetlab\Team3\MovieTickets\MovieTickets\bin\Ninject.Web.Common.pdb
+D:\itechart.dotnetlab\Team3\MovieTickets\MovieTickets\bin\Ninject.Web.Common.xml

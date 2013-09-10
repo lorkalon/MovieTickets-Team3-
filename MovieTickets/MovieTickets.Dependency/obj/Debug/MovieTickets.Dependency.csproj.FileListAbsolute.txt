@@ -16,3 +16,14 @@ D:\itechart.dotnetlab\Team3\MovieTickets\MovieTickets.Dependency\bin\Debug\ru\En
 D:\itechart.dotnetlab\Team3\MovieTickets\MovieTickets.Dependency\obj\Debug\MovieTickets.Dependency.csprojResolveAssemblyReference.cache
 D:\itechart.dotnetlab\Team3\MovieTickets\MovieTickets.Dependency\obj\Debug\MovieTickets.Dependency.dll
 D:\itechart.dotnetlab\Team3\MovieTickets\MovieTickets.Dependency\obj\Debug\MovieTickets.Dependency.pdb
+D:\itechart.dotnetlab\Team3\MovieTickets\MovieTickets.Dependency\bin\Debug\Microsoft.Web.Infrastructure.dll
+D:\itechart.dotnetlab\Team3\MovieTickets\MovieTickets.Dependency\bin\Debug\Ninject.dll
+D:\itechart.dotnetlab\Team3\MovieTickets\MovieTickets.Dependency\bin\Debug\Ninject.Web.Common.dll
+D:\itechart.dotnetlab\Team3\MovieTickets\MovieTickets.Dependency\bin\Debug\Ninject.Web.Mvc.dll
+D:\itechart.dotnetlab\Team3\MovieTickets\MovieTickets.Dependency\bin\Debug\WebActivator.dll
+D:\itechart.dotnetlab\Team3\MovieTickets\MovieTickets.Dependency\bin\Debug\Ninject.pdb
+D:\itechart.dotnetlab\Team3\MovieTickets\MovieTickets.Dependency\bin\Debug\Ninject.xml
+D:\itechart.dotnetlab\Team3\MovieTickets\MovieTickets.Dependency\bin\Debug\Ninject.Web.Common.pdb
+D:\itechart.dotnetlab\Team3\MovieTickets\MovieTickets.Dependency\bin\Debug\Ninject.Web.Common.xml
+D:\itechart.dotnetlab\Team3\MovieTickets\MovieTickets.Dependency\bin\Debug\Ninject.Web.Mvc.pdb
+D:\itechart.dotnetlab\Team3\MovieTickets\MovieTickets.Dependency\bin\Debug\Ninject.Web.Mvc.xml
