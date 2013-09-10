@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieTickets", "MovieTickets\MovieTickets.csproj", "{D7C6D737-92D8-4A9C-B887-6C78875223C2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entities", "Entities\Entities.csproj", "{890B122D-19A8-4A73-AFD5-059532A7F752}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieTickets.DAL", "MovieTickets.DAL\MovieTickets.DAL.csproj", "{6BC172FD-A845-443C-AFA8-3C361BE900FD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieTickets.BLL", "MovieTickets.BLL\MovieTickets.BLL.csproj", "{6D70B2BA-A612-48A0-BE29-5024C0EB9987}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D7C6D737-92D8-4A9C-B887-6C78875223C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7C6D737-92D8-4A9C-B887-6C78875223C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7C6D737-92D8-4A9C-B887-6C78875223C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7C6D737-92D8-4A9C-B887-6C78875223C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{890B122D-19A8-4A73-AFD5-059532A7F752}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{890B122D-19A8-4A73-AFD5-059532A7F752}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{890B122D-19A8-4A73-AFD5-059532A7F752}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{890B122D-19A8-4A73-AFD5-059532A7F752}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6BC172FD-A845-443C-AFA8-3C361BE900FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BC172FD-A845-443C-AFA8-3C361BE900FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BC172FD-A845-443C-AFA8-3C361BE900FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BC172FD-A845-443C-AFA8-3C361BE900FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D70B2BA-A612-48A0-BE29-5024C0EB9987}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D70B2BA-A612-48A0-BE29-5024C0EB9987}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D70B2BA-A612-48A0-BE29-5024C0EB9987}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D70B2BA-A612-48A0-BE29-5024C0EB9987}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
