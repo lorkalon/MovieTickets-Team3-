@@ -22,6 +22,8 @@ namespace MovieTickets
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            DependencyResolver.SetResolver(new Dependency.DependencyResolver());
         }
     }
 }

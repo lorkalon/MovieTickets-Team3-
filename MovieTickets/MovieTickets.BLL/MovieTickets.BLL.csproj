@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BllTest.cs" />
     <Compile Include="CinemaManager.cs" />
     <Compile Include="FilmManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -52,6 +53,10 @@
     <ProjectReference Include="..\MovieTickets.IBLL\MovieTickets.IBLL.csproj">
       <Project>{77a8969d-9adb-4d2a-83b0-b2ea9c74478a}</Project>
       <Name>MovieTickets.IBLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MovieTickets.IDAL\MovieTickets.IDAL.csproj">
+      <Project>{c40dd980-e074-414a-90d5-42137430ceac}</Project>
+      <Name>MovieTickets.IDAL</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

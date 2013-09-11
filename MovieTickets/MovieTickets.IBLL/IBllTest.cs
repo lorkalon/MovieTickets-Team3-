@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using MovieTickets.IBLL;
 
-namespace MovieTickets.BLL
+namespace MovieTickets.IBLL
 {
-    public class FilmManager:IFilmManager
+    public interface IBllTest
     {
+        string GetDallString();
     }
 }

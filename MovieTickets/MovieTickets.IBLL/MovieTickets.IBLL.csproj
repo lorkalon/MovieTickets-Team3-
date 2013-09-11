@@ -39,9 +39,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IBllTest.cs" />
     <Compile Include="ICinemaManager.cs" />
     <Compile Include="IFilmManager.cs" />
     <Compile Include="ISessionManager.cs" />
+    <Compile Include="IUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

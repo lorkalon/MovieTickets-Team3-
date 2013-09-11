@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MovieTickets.Dependency
+namespace MovieTickets.IBLL
 {
-    public interface ISword
+    interface IUser
     {
-        string Kill();
     }
 }

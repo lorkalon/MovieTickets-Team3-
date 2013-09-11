@@ -3,14 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MovieTickets.IDAL;
 
-namespace MovieTickets.Dependency
+namespace MovieTickets.DAL
 {
-    class Sword : ISword
+    public class DalTest: IDalTest
     {
-        public string Kill()
+        public string GetMessege()
         {
-            return "killed";
+            return "Messege";
         }
     }
 }

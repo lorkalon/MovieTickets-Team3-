@@ -3,13 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Ninject;
 
-namespace MovieTickets.Dependency
+namespace MovieTickets.IDAL
 {
-   public class Testing
+    public interface IDalTest
     {
-        [Inject]
-        public ISword sword { get; set; }
+        string GetMessege();
     }
 }

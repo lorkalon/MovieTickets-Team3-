@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using MovieTickets.IBLL;
 
 namespace MovieTickets.Controllers
 {
@@ -12,6 +13,12 @@ namespace MovieTickets.Controllers
         /// 
         /// Public actions
         /// 
+        private IFilmManager _filmManager;                 // That's how create an object by interface
+        public FilmController(IFilmManager filmManager)
+        {
+            _filmManager = filmManager;
+        }
+
         private int _pageSize = 10;
         public ActionResult Index()
         {
