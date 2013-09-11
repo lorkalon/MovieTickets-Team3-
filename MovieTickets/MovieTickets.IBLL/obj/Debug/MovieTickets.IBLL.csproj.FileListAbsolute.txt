@@ -1,7 +1,0 @@
-D:\itechart.dotnetlab\Team3\MovieTickets\MovieTickets.IBLL\bin\Debug\MovieTickets.IBLL.dll
-D:\itechart.dotnetlab\Team3\MovieTickets\MovieTickets.IBLL\bin\Debug\MovieTickets.IBLL.pdb
-D:\itechart.dotnetlab\Team3\MovieTickets\MovieTickets.IBLL\bin\Debug\MovieTickets.Entities.dll
-D:\itechart.dotnetlab\Team3\MovieTickets\MovieTickets.IBLL\bin\Debug\MovieTickets.Entities.pdb
-D:\itechart.dotnetlab\Team3\MovieTickets\MovieTickets.IBLL\obj\Debug\MovieTickets.IBLL.csprojResolveAssemblyReference.cache
-D:\itechart.dotnetlab\Team3\MovieTickets\MovieTickets.IBLL\obj\Debug\MovieTickets.IBLL.dll
-D:\itechart.dotnetlab\Team3\MovieTickets\MovieTickets.IBLL\obj\Debug\MovieTickets.IBLL.pdb
