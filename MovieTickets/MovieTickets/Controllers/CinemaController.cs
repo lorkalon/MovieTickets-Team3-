@@ -4,7 +4,6 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using MovieTickets.Dependency;
-using MovieTickets.IBLL;
 
 namespace MovieTickets.Controllers
 {
@@ -14,16 +13,10 @@ namespace MovieTickets.Controllers
         /// <summary>
         /// Public action
         /// </summary>
-
-        private IBllTest _bllTest;
-        public CinemaController(IBllTest bllTest)
-        {
-            _bllTest = bllTest;
-        }
-
+        
         public ActionResult Index()
         {
-            var s = _bllTest.GetDallString();
+            
 
             return View();
         }
