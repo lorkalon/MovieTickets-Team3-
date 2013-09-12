@@ -39,10 +39,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CinemaService.cs" />
-    <Compile Include="FilmService.cs" />
+    <Compile Include="BllTest.cs" />
+    <Compile Include="CinemaManager.cs" />
+    <Compile Include="FilmManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SessionService.cs" />
+    <Compile Include="SessionManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MovieTickets.Entities\MovieTickets.Entities.csproj">
