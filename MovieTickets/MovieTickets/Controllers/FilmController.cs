@@ -1,9 +1,10 @@
-﻿using System;
+﻿using MovieTickets.Entities;
+using MovieTickets.IBLL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using MovieTickets.IBLL;
 
 namespace MovieTickets.Controllers
 {
@@ -13,21 +14,17 @@ namespace MovieTickets.Controllers
         /// 
         /// Public actions
         /// 
-        private IFilmManager _filmManager;                 // That's how create an object by interface
-        public FilmController(IFilmManager filmManager)
-        {
-            _filmManager = filmManager;
-        }
-
         private int _pageSize = 10;
         public ActionResult Index()
         {
             return View();
         }
 
-        public ActionResult ListOfFilms(int page)
+        public ActionResult ListOfFilms(int page = 1)
         {
-            return View();
+            IFilmService filmService = DependencyResolver.Current.GetService<IFilmService>();
+            ICollection<Film> films = filmService.GetAll().Skip((page - 1)*_pageSize).Take(_pageSize).ToArray();
+            return View(films);
         }
 
         public ActionResult FilmDetails(int filmId)

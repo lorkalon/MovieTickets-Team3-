@@ -9,8 +9,21 @@ namespace MovieTickets.IDAL
     public interface IUnitOfWork
     {
         //add IRepositor|Entity| GetIRepository|Entity| method to get repository for an entity
-        IRepositoryUser GetIRepositoryUser();
-
+        
+        ICinemaRepository GetICinemaRepository();
+        ICinemaCommentRepository GetICinemaCommentRepository();
+        ICinemaRatingRepository GetICinemaRatingRepository();
+        IFilmRepository GetIFilmRepository();
+        IFilmCommentRepository GetIFilmCommentRepository();
+        IFilmRatingRepository GetIFilmRatingRepository();
+        IHallRepository GetIHallRepository();
+        IMediaReferenceRepository GetIMediaReferenceRepository();
+        IRoleRepository GetIRoleRepository();
+        ISeatRepository GetISeatRepository();
+        ISessionRepository GetISessionRepository();
+        ITicketReserveRepository GetITicketReserveRepository();
+        IUserRepository GetIUserRepository();
+        
         void Save();
     }
 }
