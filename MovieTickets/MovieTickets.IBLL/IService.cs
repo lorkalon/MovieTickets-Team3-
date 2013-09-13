@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MovieTickets.IBLL
 {
-    public interface IService<TEntity> where TEntity : class
+    public interface IService<TEntity>: IDisposable where TEntity : class
     {
         IEnumerable<TEntity> GetAll();
         TEntity GetById(int id);

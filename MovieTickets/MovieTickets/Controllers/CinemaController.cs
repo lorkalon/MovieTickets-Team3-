@@ -16,8 +16,6 @@ namespace MovieTickets.Controllers
         
         public ActionResult Index()
         {
-            
-
             return View();
         }
 

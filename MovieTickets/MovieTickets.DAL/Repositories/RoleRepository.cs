@@ -3,41 +3,44 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using MovieTickets.DAL.Model;
 using MovieTickets.IDAL;
 using MovieTickets.Entities;
+
 
 namespace MovieTickets.DAL.Repositories
 {
     class RoleRepository : BaseRepository, IRoleRepository
     {
-        public RoleRepository(DataBaseContext context) : base(context)
+        public RoleRepository(MovieTickesDBEntities context)
+            : base(context)
         {
         }
 
-        public IQueryable<Role> GetAll()
+        public IEnumerable<Role> GetAll()
         {
-            throw new NotImplementedException();
+            return Context.Roles;
         }
 
-        public Role GetById(object id)
+        public Role GetById(int id)
         {
-            throw new NotImplementedException();
+            return Context.Roles.First(x => x.Id == id);
         }
 
         public void Insert(Role entity)
         {
-            throw new NotImplementedException();
+            Context.Roles.Add(entity);
         }
 
         public void Update(Role entity)
         {
-            throw new NotImplementedException();
+            Role role = Context.Roles.First(x => x.Id == entity.Id);
+            role.Name = entity.Name;
         }
 
         public void Delete(Role entity)
         {
-            throw new NotImplementedException();
+            Role role = Context.Roles.First(x => x.Id == entity.Id);
+            Context.Roles.Remove(role);
         }
     }
 }

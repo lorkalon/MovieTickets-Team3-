@@ -3,14 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using MovieTickets.DAL.Model;
+
+using MovieTickets.Entities;
 
 namespace MovieTickets.DAL.Repositories
 {
     internal abstract class BaseRepository : IDisposable
     {
-        protected DataBaseContext Context { get; private set; }
-        internal BaseRepository(DataBaseContext context)
+        protected MovieTickesDBEntities Context { get; private set; }
+        internal BaseRepository(MovieTickesDBEntities context)
         {
             Context = context;
         }

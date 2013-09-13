@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using MovieTickets.DAL.Model;
+
 using MovieTickets.IDAL;
 using MovieTickets.Entities;
 
@@ -11,33 +11,37 @@ namespace MovieTickets.DAL.Repositories
 {
     class FilmRatingRepository : BaseRepository, IFilmRatingRepository
     {
-        public FilmRatingRepository(DataBaseContext context) : base(context)
+        public FilmRatingRepository(MovieTickesDBEntities context) : base(context)
         {
         }
 
-        public IQueryable<FilmRating> GetAll()
+        public IEnumerable<FilmRate> GetAll()
+        {
+            return Context.FilmRates;
+        }
+
+        public FilmRate GetById(int id)
         {
             throw new NotImplementedException();
         }
 
-        public FilmRating GetById(object id)
+        public void Insert(FilmRate entity)
         {
-            throw new NotImplementedException();
+            Context.FilmRates.Add(entity);
         }
 
-        public void Insert(FilmRating entity)
+        public void Update(FilmRate entity)
         {
-            throw new NotImplementedException();
+            FilmRate rate =
+                Context.FilmRates.First(x => (x.UserId == entity.UserId) && (x.FilmId == entity.FilmId));
+            rate.Rating = entity.Rating;
         }
 
-        public void Update(FilmRating entity)
+        public void Delete(FilmRate entity)
         {
-            throw new NotImplementedException();
-        }
-
-        public void Delete(FilmRating entity)
-        {
-            throw new NotImplementedException();
+            FilmRate rate =
+                Context.FilmRates.First(x => (x.UserId == entity.UserId) && (x.FilmId == entity.FilmId));
+            Context.FilmRates.Remove(rate);
         }
     }
 }

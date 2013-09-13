@@ -1,0 +1,28 @@
+﻿@model FoodsShop.Models.AccountModels.UserProfileViewModel
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "EditUserProfile";
+}
+<div class="span10 offset2">
+    <h2>Edit profile</h2>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <div class="error-box">
+            @Html.ValidationSummary()
+        </div>
+        <fieldset>
+            <legend>Profile</legend>
+            @Html.LabelFor(m => m.Name)
+            @Html.TextBoxFor(m => m.Name)
+            @Html.LabelFor(m => m.Surname)
+            @Html.TextBoxFor(m => m.Surname)
+            @Html.LabelFor(m => m.Phone)
+            @Html.TextBoxFor(m => m.Phone)
+            <div>
+                <input type="submit" value="Edit profile" class="btn btn-primary" />
+            </div>
+        </fieldset>
+    }
+</div>

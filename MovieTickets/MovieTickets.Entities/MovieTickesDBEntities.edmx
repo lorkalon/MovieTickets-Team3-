@@ -1,0 +1,1109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Хранилище MovieTickesDBModel" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="Хранилище MovieTickesDBModelContainer">
+          <EntitySet Name="Authentication" EntityType="Хранилище MovieTickesDBModel.Authentication" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CinemaComments" EntityType="Хранилище MovieTickesDBModel.CinemaComments" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CinemaRates" EntityType="Хранилище MovieTickesDBModel.CinemaRates" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Cinemas" EntityType="Хранилище MovieTickesDBModel.Cinemas" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ConfirmRegistrationKeys" EntityType="Хранилище MovieTickesDBModel.ConfirmRegistrationKeys" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="FilmComments" EntityType="Хранилище MovieTickesDBModel.FilmComments" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="FilmRates" EntityType="Хранилище MovieTickesDBModel.FilmRates" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Films" EntityType="Хранилище MovieTickesDBModel.Films" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Halls" EntityType="Хранилище MovieTickesDBModel.Halls" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Roles" EntityType="Хранилище MovieTickesDBModel.Roles" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Seats" EntityType="Хранилище MovieTickesDBModel.Seats" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Sessions" EntityType="Хранилище MovieTickesDBModel.Sessions" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TicketReserve" EntityType="Хранилище MovieTickesDBModel.TicketReserve" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Users" EntityType="Хранилище MovieTickesDBModel.Users" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="UsersToRoles" EntityType="Хранилище MovieTickesDBModel.UsersToRoles" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_Authentication_ToUsers" Association="Хранилище MovieTickesDBModel.FK_Authentication_ToUsers">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Authentication" EntitySet="Authentication" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CinemaComments_ToCinema" Association="Хранилище MovieTickesDBModel.FK_CinemaComments_ToCinema">
+            <End Role="Cinemas" EntitySet="Cinemas" />
+            <End Role="CinemaComments" EntitySet="CinemaComments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CinemaComments_ToUser" Association="Хранилище MovieTickesDBModel.FK_CinemaComments_ToUser">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="CinemaComments" EntitySet="CinemaComments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CinemaRates_ToCinemas" Association="Хранилище MovieTickesDBModel.FK_CinemaRates_ToCinemas">
+            <End Role="Cinemas" EntitySet="Cinemas" />
+            <End Role="CinemaRates" EntitySet="CinemaRates" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CinemaRates_ToUsers" Association="Хранилище MovieTickesDBModel.FK_CinemaRates_ToUsers">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="CinemaRates" EntitySet="CinemaRates" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ConfirmRegistrationKeys_ToUsers" Association="Хранилище MovieTickesDBModel.FK_ConfirmRegistrationKeys_ToUsers">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="ConfirmRegistrationKeys" EntitySet="ConfirmRegistrationKeys" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FilmComments_ToFilm" Association="Хранилище MovieTickesDBModel.FK_FilmComments_ToFilm">
+            <End Role="Films" EntitySet="Films" />
+            <End Role="FilmComments" EntitySet="FilmComments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FilmComments_ToUser" Association="Хранилище MovieTickesDBModel.FK_FilmComments_ToUser">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="FilmComments" EntitySet="FilmComments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FilmRates_ToFilm" Association="Хранилище MovieTickesDBModel.FK_FilmRates_ToFilm">
+            <End Role="Films" EntitySet="Films" />
+            <End Role="FilmRates" EntitySet="FilmRates" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FilmRates_ToUser" Association="Хранилище MovieTickesDBModel.FK_FilmRates_ToUser">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="FilmRates" EntitySet="FilmRates" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Halls_ToCinema" Association="Хранилище MovieTickesDBModel.FK_Halls_ToCinema">
+            <End Role="Cinemas" EntitySet="Cinemas" />
+            <End Role="Halls" EntitySet="Halls" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Seats_ToHall" Association="Хранилище MovieTickesDBModel.FK_Seats_ToHall">
+            <End Role="Halls" EntitySet="Halls" />
+            <End Role="Seats" EntitySet="Seats" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Sessions_Film" Association="Хранилище MovieTickesDBModel.FK_Sessions_Film">
+            <End Role="Films" EntitySet="Films" />
+            <End Role="Sessions" EntitySet="Sessions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Sessions_Hall" Association="Хранилище MovieTickesDBModel.FK_Sessions_Hall">
+            <End Role="Halls" EntitySet="Halls" />
+            <End Role="Sessions" EntitySet="Sessions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TicketReserve_ToSeat" Association="Хранилище MovieTickesDBModel.FK_TicketReserve_ToSeat">
+            <End Role="Seats" EntitySet="Seats" />
+            <End Role="TicketReserve" EntitySet="TicketReserve" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TicketReserve_ToSession" Association="Хранилище MovieTickesDBModel.FK_TicketReserve_ToSession">
+            <End Role="Sessions" EntitySet="Sessions" />
+            <End Role="TicketReserve" EntitySet="TicketReserve" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TicketReserve_ToUser" Association="Хранилище MovieTickesDBModel.FK_TicketReserve_ToUser">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="TicketReserve" EntitySet="TicketReserve" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UsersToRoles_ToRoles" Association="Хранилище MovieTickesDBModel.FK_UsersToRoles_ToRoles">
+            <End Role="Roles" EntitySet="Roles" />
+            <End Role="UsersToRoles" EntitySet="UsersToRoles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UsersToRoles_ToUsers" Association="Хранилище MovieTickesDBModel.FK_UsersToRoles_ToUsers">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="UsersToRoles" EntitySet="UsersToRoles" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Authentication">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="UserId" Type="int" Nullable="false" />
+          <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="CinemaComments">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="int" Nullable="false" />
+          <Property Name="CinemaId" Type="int" Nullable="false" />
+          <Property Name="Comment" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CinemaRates">
+          <Key>
+            <PropertyRef Name="UserId" />
+            <PropertyRef Name="CinemaId" />
+          </Key>
+          <Property Name="UserId" Type="int" Nullable="false" />
+          <Property Name="CinemaId" Type="int" Nullable="false" />
+          <Property Name="Rating" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Cinemas">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="Address" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ConfirmRegistrationKeys">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="UserId" Type="int" Nullable="false" />
+          <Property Name="Key" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="FilmComments">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="FilmId" Type="int" Nullable="false" />
+          <Property Name="UserId" Type="int" Nullable="false" />
+          <Property Name="Comment" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="FilmRates">
+          <Key>
+            <PropertyRef Name="UserId" />
+            <PropertyRef Name="FilmId" />
+          </Key>
+          <Property Name="UserId" Type="int" Nullable="false" />
+          <Property Name="FilmId" Type="int" Nullable="false" />
+          <Property Name="Rating" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Films">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Description" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Halls">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CinemaId" Type="int" Nullable="false" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="Schema" Type="nvarchar(max)" />
+          <Property Name="VipCoef" Type="float" />
+        </EntityType>
+        <EntityType Name="Roles">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Seats">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="HallId" Type="int" Nullable="false" />
+          <Property Name="Number" Type="int" Nullable="false" />
+          <Property Name="IsVip" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Sessions">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="FilmId" Type="int" Nullable="false" />
+          <Property Name="HallId" Type="int" Nullable="false" />
+          <Property Name="StartTime" Type="datetime" Nullable="false" />
+          <Property Name="BasePrice" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TicketReserve">
+          <Key>
+            <PropertyRef Name="SeatId" />
+            <PropertyRef Name="SessionId" />
+          </Key>
+          <Property Name="SeatId" Type="int" Nullable="false" />
+          <Property Name="SessionId" Type="int" Nullable="false" />
+          <Property Name="UserId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Login" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Email" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Blocked" Type="bit" />
+          <Property Name="RegisterDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UsersToRoles">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="UserId" Type="int" Nullable="false" />
+          <Property Name="RoleId" Type="int" Nullable="false" />
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <Association Name="FK_Authentication_ToUsers">
+          <End Role="Users" Type="Хранилище MovieTickesDBModel.Users" Multiplicity="1" />
+          <End Role="Authentication" Type="Хранилище MovieTickesDBModel.Authentication" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Authentication">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CinemaComments_ToCinema">
+          <End Role="Cinemas" Type="Хранилище MovieTickesDBModel.Cinemas" Multiplicity="1" />
+          <End Role="CinemaComments" Type="Хранилище MovieTickesDBModel.CinemaComments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cinemas">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CinemaComments">
+              <PropertyRef Name="CinemaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CinemaComments_ToUser">
+          <End Role="Users" Type="Хранилище MovieTickesDBModel.Users" Multiplicity="1" />
+          <End Role="CinemaComments" Type="Хранилище MovieTickesDBModel.CinemaComments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CinemaComments">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CinemaRates_ToCinemas">
+          <End Role="Cinemas" Type="Хранилище MovieTickesDBModel.Cinemas" Multiplicity="1" />
+          <End Role="CinemaRates" Type="Хранилище MovieTickesDBModel.CinemaRates" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cinemas">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CinemaRates">
+              <PropertyRef Name="CinemaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CinemaRates_ToUsers">
+          <End Role="Users" Type="Хранилище MovieTickesDBModel.Users" Multiplicity="1" />
+          <End Role="CinemaRates" Type="Хранилище MovieTickesDBModel.CinemaRates" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CinemaRates">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ConfirmRegistrationKeys_ToUsers">
+          <End Role="Users" Type="Хранилище MovieTickesDBModel.Users" Multiplicity="1" />
+          <End Role="ConfirmRegistrationKeys" Type="Хранилище MovieTickesDBModel.ConfirmRegistrationKeys" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ConfirmRegistrationKeys">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FilmComments_ToFilm">
+          <End Role="Films" Type="Хранилище MovieTickesDBModel.Films" Multiplicity="1" />
+          <End Role="FilmComments" Type="Хранилище MovieTickesDBModel.FilmComments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Films">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="FilmComments">
+              <PropertyRef Name="FilmId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FilmComments_ToUser">
+          <End Role="Users" Type="Хранилище MovieTickesDBModel.Users" Multiplicity="1" />
+          <End Role="FilmComments" Type="Хранилище MovieTickesDBModel.FilmComments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="FilmComments">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FilmRates_ToFilm">
+          <End Role="Films" Type="Хранилище MovieTickesDBModel.Films" Multiplicity="1" />
+          <End Role="FilmRates" Type="Хранилище MovieTickesDBModel.FilmRates" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Films">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="FilmRates">
+              <PropertyRef Name="FilmId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FilmRates_ToUser">
+          <End Role="Users" Type="Хранилище MovieTickesDBModel.Users" Multiplicity="1" />
+          <End Role="FilmRates" Type="Хранилище MovieTickesDBModel.FilmRates" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="FilmRates">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Halls_ToCinema">
+          <End Role="Cinemas" Type="Хранилище MovieTickesDBModel.Cinemas" Multiplicity="1" />
+          <End Role="Halls" Type="Хранилище MovieTickesDBModel.Halls" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cinemas">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Halls">
+              <PropertyRef Name="CinemaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Seats_ToHall">
+          <End Role="Halls" Type="Хранилище MovieTickesDBModel.Halls" Multiplicity="1" />
+          <End Role="Seats" Type="Хранилище MovieTickesDBModel.Seats" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Halls">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Seats">
+              <PropertyRef Name="HallId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Sessions_Film">
+          <End Role="Films" Type="Хранилище MovieTickesDBModel.Films" Multiplicity="1" />
+          <End Role="Sessions" Type="Хранилище MovieTickesDBModel.Sessions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Films">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Sessions">
+              <PropertyRef Name="FilmId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Sessions_Hall">
+          <End Role="Halls" Type="Хранилище MovieTickesDBModel.Halls" Multiplicity="1" />
+          <End Role="Sessions" Type="Хранилище MovieTickesDBModel.Sessions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Halls">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Sessions">
+              <PropertyRef Name="HallId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TicketReserve_ToSeat">
+          <End Role="Seats" Type="Хранилище MovieTickesDBModel.Seats" Multiplicity="1" />
+          <End Role="TicketReserve" Type="Хранилище MovieTickesDBModel.TicketReserve" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Seats">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TicketReserve">
+              <PropertyRef Name="SeatId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TicketReserve_ToSession">
+          <End Role="Sessions" Type="Хранилище MovieTickesDBModel.Sessions" Multiplicity="1" />
+          <End Role="TicketReserve" Type="Хранилище MovieTickesDBModel.TicketReserve" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Sessions">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TicketReserve">
+              <PropertyRef Name="SessionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TicketReserve_ToUser">
+          <End Role="Users" Type="Хранилище MovieTickesDBModel.Users" Multiplicity="1" />
+          <End Role="TicketReserve" Type="Хранилище MovieTickesDBModel.TicketReserve" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TicketReserve">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UsersToRoles_ToRoles">
+          <End Role="Roles" Type="Хранилище MovieTickesDBModel.Roles" Multiplicity="1" />
+          <End Role="UsersToRoles" Type="Хранилище MovieTickesDBModel.UsersToRoles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Roles">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UsersToRoles">
+              <PropertyRef Name="RoleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UsersToRoles_ToUsers">
+          <End Role="Users" Type="Хранилище MovieTickesDBModel.Users" Multiplicity="1" />
+          <End Role="UsersToRoles" Type="Хранилище MovieTickesDBModel.UsersToRoles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UsersToRoles">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="MovieTickesDBModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="MovieTickesDBEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="Authentications" EntityType="MovieTickesDBModel.Authentication" />
+          <EntitySet Name="CinemaComments" EntityType="MovieTickesDBModel.CinemaComment" />
+          <EntitySet Name="CinemaRates" EntityType="MovieTickesDBModel.CinemaRate" />
+          <EntitySet Name="Cinemas" EntityType="MovieTickesDBModel.Cinema" />
+          <EntitySet Name="FilmComments" EntityType="MovieTickesDBModel.FilmComment" />
+          <EntitySet Name="FilmRates" EntityType="MovieTickesDBModel.FilmRate" />
+          <EntitySet Name="Films" EntityType="MovieTickesDBModel.Film" />
+          <EntitySet Name="Halls" EntityType="MovieTickesDBModel.Hall" />
+          <EntitySet Name="Roles" EntityType="MovieTickesDBModel.Role" />
+          <EntitySet Name="Seats" EntityType="MovieTickesDBModel.Seat" />
+          <EntitySet Name="Sessions" EntityType="MovieTickesDBModel.Session" />
+          <EntitySet Name="TicketReserves" EntityType="MovieTickesDBModel.TicketReserve" />
+          <EntitySet Name="Users" EntityType="MovieTickesDBModel.User" />
+          <EntitySet Name="UsersToRoles" EntityType="MovieTickesDBModel.UsersToRole" />
+          <AssociationSet Name="FK_Authentication_ToUsers" Association="MovieTickesDBModel.FK_Authentication_ToUsers">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Authentication" EntitySet="Authentications" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CinemaComments_ToCinema" Association="MovieTickesDBModel.FK_CinemaComments_ToCinema">
+            <End Role="Cinemas" EntitySet="Cinemas" />
+            <End Role="CinemaComments" EntitySet="CinemaComments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CinemaComments_ToUser" Association="MovieTickesDBModel.FK_CinemaComments_ToUser">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="CinemaComments" EntitySet="CinemaComments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CinemaRates_ToCinemas" Association="MovieTickesDBModel.FK_CinemaRates_ToCinemas">
+            <End Role="Cinemas" EntitySet="Cinemas" />
+            <End Role="CinemaRates" EntitySet="CinemaRates" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CinemaRates_ToUsers" Association="MovieTickesDBModel.FK_CinemaRates_ToUsers">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="CinemaRates" EntitySet="CinemaRates" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Halls_ToCinema" Association="MovieTickesDBModel.FK_Halls_ToCinema">
+            <End Role="Cinemas" EntitySet="Cinemas" />
+            <End Role="Halls" EntitySet="Halls" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FilmComments_ToFilm" Association="MovieTickesDBModel.FK_FilmComments_ToFilm">
+            <End Role="Films" EntitySet="Films" />
+            <End Role="FilmComments" EntitySet="FilmComments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FilmComments_ToUser" Association="MovieTickesDBModel.FK_FilmComments_ToUser">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="FilmComments" EntitySet="FilmComments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FilmRates_ToFilm" Association="MovieTickesDBModel.FK_FilmRates_ToFilm">
+            <End Role="Films" EntitySet="Films" />
+            <End Role="FilmRates" EntitySet="FilmRates" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FilmRates_ToUser" Association="MovieTickesDBModel.FK_FilmRates_ToUser">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="FilmRates" EntitySet="FilmRates" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Sessions_Film" Association="MovieTickesDBModel.FK_Sessions_Film">
+            <End Role="Films" EntitySet="Films" />
+            <End Role="Sessions" EntitySet="Sessions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Seats_ToHall" Association="MovieTickesDBModel.FK_Seats_ToHall">
+            <End Role="Halls" EntitySet="Halls" />
+            <End Role="Seats" EntitySet="Seats" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Sessions_Hall" Association="MovieTickesDBModel.FK_Sessions_Hall">
+            <End Role="Halls" EntitySet="Halls" />
+            <End Role="Sessions" EntitySet="Sessions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UsersToRoles_ToRoles" Association="MovieTickesDBModel.FK_UsersToRoles_ToRoles">
+            <End Role="Roles" EntitySet="Roles" />
+            <End Role="UsersToRoles" EntitySet="UsersToRoles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TicketReserve_ToSeat" Association="MovieTickesDBModel.FK_TicketReserve_ToSeat">
+            <End Role="Seats" EntitySet="Seats" />
+            <End Role="TicketReserve" EntitySet="TicketReserves" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TicketReserve_ToSession" Association="MovieTickesDBModel.FK_TicketReserve_ToSession">
+            <End Role="Sessions" EntitySet="Sessions" />
+            <End Role="TicketReserve" EntitySet="TicketReserves" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TicketReserve_ToUser" Association="MovieTickesDBModel.FK_TicketReserve_ToUser">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="TicketReserve" EntitySet="TicketReserves" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UsersToRoles_ToUsers" Association="MovieTickesDBModel.FK_UsersToRoles_ToUsers">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="UsersToRoles" EntitySet="UsersToRoles" />
+          </AssociationSet>
+          <EntitySet Name="ConfirmRegistrationKeys" EntityType="MovieTickesDBModel.ConfirmRegistrationKeys" />
+          <AssociationSet Name="FK_ConfirmRegistrationKeys_ToUsers" Association="MovieTickesDBModel.FK_ConfirmRegistrationKeys_ToUsers">
+            <End Role="User" EntitySet="Users" />
+            <End Role="ConfirmRegistrationKeys" EntitySet="ConfirmRegistrationKeys" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Authentication">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="UserId" Type="Int32" Nullable="false" />
+          <Property Name="Password" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="User" Relationship="MovieTickesDBModel.FK_Authentication_ToUsers" FromRole="Authentication" ToRole="Users" />
+        </EntityType>
+        <EntityType Name="CinemaComment">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="Int32" Nullable="false" />
+          <Property Name="CinemaId" Type="Int32" Nullable="false" />
+          <Property Name="Comment" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Cinema" Relationship="MovieTickesDBModel.FK_CinemaComments_ToCinema" FromRole="CinemaComments" ToRole="Cinemas" />
+          <NavigationProperty Name="User" Relationship="MovieTickesDBModel.FK_CinemaComments_ToUser" FromRole="CinemaComments" ToRole="Users" />
+        </EntityType>
+        <EntityType Name="CinemaRate">
+          <Key>
+            <PropertyRef Name="UserId" />
+            <PropertyRef Name="CinemaId" />
+          </Key>
+          <Property Name="UserId" Type="Int32" Nullable="false" />
+          <Property Name="CinemaId" Type="Int32" Nullable="false" />
+          <Property Name="Rating" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Cinema" Relationship="MovieTickesDBModel.FK_CinemaRates_ToCinemas" FromRole="CinemaRates" ToRole="Cinemas" />
+          <NavigationProperty Name="User" Relationship="MovieTickesDBModel.FK_CinemaRates_ToUsers" FromRole="CinemaRates" ToRole="Users" />
+        </EntityType>
+        <EntityType Name="Cinema">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Address" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          </EntityType>
+        <EntityType Name="FilmComment">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="FilmId" Type="Int32" Nullable="false" />
+          <Property Name="UserId" Type="Int32" Nullable="false" />
+          <Property Name="Comment" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Film" Relationship="MovieTickesDBModel.FK_FilmComments_ToFilm" FromRole="FilmComments" ToRole="Films" />
+          <NavigationProperty Name="User" Relationship="MovieTickesDBModel.FK_FilmComments_ToUser" FromRole="FilmComments" ToRole="Users" />
+        </EntityType>
+        <EntityType Name="FilmRate">
+          <Key>
+            <PropertyRef Name="UserId" />
+            <PropertyRef Name="FilmId" />
+          </Key>
+          <Property Name="UserId" Type="Int32" Nullable="false" />
+          <Property Name="FilmId" Type="Int32" Nullable="false" />
+          <Property Name="Rating" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Film" Relationship="MovieTickesDBModel.FK_FilmRates_ToFilm" FromRole="FilmRates" ToRole="Films" />
+          <NavigationProperty Name="User" Relationship="MovieTickesDBModel.FK_FilmRates_ToUser" FromRole="FilmRates" ToRole="Users" />
+        </EntityType>
+        <EntityType Name="Film">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          </EntityType>
+        <EntityType Name="Hall">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="CinemaId" Type="Int32" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Schema" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="VipCoef" Type="Double" />
+          <NavigationProperty Name="Cinema" Relationship="MovieTickesDBModel.FK_Halls_ToCinema" FromRole="Halls" ToRole="Cinemas" />
+          </EntityType>
+        <EntityType Name="Role">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Seat">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="HallId" Type="Int32" Nullable="false" />
+          <Property Name="Number" Type="Int32" Nullable="false" />
+          <Property Name="IsVip" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="Hall" Relationship="MovieTickesDBModel.FK_Seats_ToHall" FromRole="Seats" ToRole="Halls" />
+        </EntityType>
+        <EntityType Name="Session">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="FilmId" Type="Int32" Nullable="false" />
+          <Property Name="HallId" Type="Int32" Nullable="false" />
+          <Property Name="StartTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="BasePrice" Type="Double" Nullable="false" />
+          <NavigationProperty Name="Film" Relationship="MovieTickesDBModel.FK_Sessions_Film" FromRole="Sessions" ToRole="Films" />
+          <NavigationProperty Name="Hall" Relationship="MovieTickesDBModel.FK_Sessions_Hall" FromRole="Sessions" ToRole="Halls" />
+        </EntityType>
+        <EntityType Name="TicketReserve">
+          <Key>
+            <PropertyRef Name="SeatId" />
+            <PropertyRef Name="SessionId" />
+          </Key>
+          <Property Name="SeatId" Type="Int32" Nullable="false" />
+          <Property Name="SessionId" Type="Int32" Nullable="false" />
+          <Property Name="UserId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Seat" Relationship="MovieTickesDBModel.FK_TicketReserve_ToSeat" FromRole="TicketReserve" ToRole="Seats" />
+          <NavigationProperty Name="Session" Relationship="MovieTickesDBModel.FK_TicketReserve_ToSession" FromRole="TicketReserve" ToRole="Sessions" />
+          <NavigationProperty Name="User" Relationship="MovieTickesDBModel.FK_TicketReserve_ToUser" FromRole="TicketReserve" ToRole="Users" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="FirstName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="LastName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Login" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Email" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Type="Boolean" Name="Blocked" />
+          <Property Type="DateTime" Name="RegisterDate" Nullable="false" Precision="3" />
+          </EntityType>
+        <EntityType Name="UsersToRole">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="UserId" Type="Int32" Nullable="false" />
+          <Property Name="RoleId" Type="Int32" Nullable="false" />
+          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="Role" Relationship="MovieTickesDBModel.FK_UsersToRoles_ToRoles" FromRole="UsersToRoles" ToRole="Roles" />
+          <NavigationProperty Name="User" Relationship="MovieTickesDBModel.FK_UsersToRoles_ToUsers" FromRole="UsersToRoles" ToRole="Users" />
+        </EntityType>
+        <Association Name="FK_Authentication_ToUsers">
+          <End Role="Users" Type="MovieTickesDBModel.User" Multiplicity="1" />
+          <End Role="Authentication" Type="MovieTickesDBModel.Authentication" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Authentication">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CinemaComments_ToCinema">
+          <End Role="Cinemas" Type="MovieTickesDBModel.Cinema" Multiplicity="1" />
+          <End Role="CinemaComments" Type="MovieTickesDBModel.CinemaComment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cinemas">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CinemaComments">
+              <PropertyRef Name="CinemaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CinemaComments_ToUser">
+          <End Role="Users" Type="MovieTickesDBModel.User" Multiplicity="1" />
+          <End Role="CinemaComments" Type="MovieTickesDBModel.CinemaComment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CinemaComments">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CinemaRates_ToCinemas">
+          <End Role="Cinemas" Type="MovieTickesDBModel.Cinema" Multiplicity="1" />
+          <End Role="CinemaRates" Type="MovieTickesDBModel.CinemaRate" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cinemas">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CinemaRates">
+              <PropertyRef Name="CinemaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CinemaRates_ToUsers">
+          <End Role="Users" Type="MovieTickesDBModel.User" Multiplicity="1" />
+          <End Role="CinemaRates" Type="MovieTickesDBModel.CinemaRate" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CinemaRates">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Halls_ToCinema">
+          <End Role="Cinemas" Type="MovieTickesDBModel.Cinema" Multiplicity="1" />
+          <End Role="Halls" Type="MovieTickesDBModel.Hall" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cinemas">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Halls">
+              <PropertyRef Name="CinemaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FilmComments_ToFilm">
+          <End Role="Films" Type="MovieTickesDBModel.Film" Multiplicity="1" />
+          <End Role="FilmComments" Type="MovieTickesDBModel.FilmComment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Films">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="FilmComments">
+              <PropertyRef Name="FilmId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FilmComments_ToUser">
+          <End Role="Users" Type="MovieTickesDBModel.User" Multiplicity="1" />
+          <End Role="FilmComments" Type="MovieTickesDBModel.FilmComment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="FilmComments">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FilmRates_ToFilm">
+          <End Role="Films" Type="MovieTickesDBModel.Film" Multiplicity="1" />
+          <End Role="FilmRates" Type="MovieTickesDBModel.FilmRate" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Films">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="FilmRates">
+              <PropertyRef Name="FilmId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FilmRates_ToUser">
+          <End Role="Users" Type="MovieTickesDBModel.User" Multiplicity="1" />
+          <End Role="FilmRates" Type="MovieTickesDBModel.FilmRate" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="FilmRates">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Sessions_Film">
+          <End Role="Films" Type="MovieTickesDBModel.Film" Multiplicity="1" />
+          <End Role="Sessions" Type="MovieTickesDBModel.Session" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Films">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Sessions">
+              <PropertyRef Name="FilmId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Seats_ToHall">
+          <End Role="Halls" Type="MovieTickesDBModel.Hall" Multiplicity="1" />
+          <End Role="Seats" Type="MovieTickesDBModel.Seat" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Halls">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Seats">
+              <PropertyRef Name="HallId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Sessions_Hall">
+          <End Role="Halls" Type="MovieTickesDBModel.Hall" Multiplicity="1" />
+          <End Role="Sessions" Type="MovieTickesDBModel.Session" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Halls">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Sessions">
+              <PropertyRef Name="HallId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UsersToRoles_ToRoles">
+          <End Role="Roles" Type="MovieTickesDBModel.Role" Multiplicity="1" />
+          <End Role="UsersToRoles" Type="MovieTickesDBModel.UsersToRole" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Roles">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UsersToRoles">
+              <PropertyRef Name="RoleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TicketReserve_ToSeat">
+          <End Role="Seats" Type="MovieTickesDBModel.Seat" Multiplicity="1" />
+          <End Role="TicketReserve" Type="MovieTickesDBModel.TicketReserve" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Seats">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TicketReserve">
+              <PropertyRef Name="SeatId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TicketReserve_ToSession">
+          <End Role="Sessions" Type="MovieTickesDBModel.Session" Multiplicity="1" />
+          <End Role="TicketReserve" Type="MovieTickesDBModel.TicketReserve" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Sessions">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TicketReserve">
+              <PropertyRef Name="SessionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TicketReserve_ToUser">
+          <End Role="Users" Type="MovieTickesDBModel.User" Multiplicity="1" />
+          <End Role="TicketReserve" Type="MovieTickesDBModel.TicketReserve" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TicketReserve">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UsersToRoles_ToUsers">
+          <End Role="Users" Type="MovieTickesDBModel.User" Multiplicity="1" />
+          <End Role="UsersToRoles" Type="MovieTickesDBModel.UsersToRole" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UsersToRoles">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="ConfirmRegistrationKeys">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Type="Int32" Name="UserId" Nullable="false" />
+          <Property Type="String" Name="Key" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="User" Relationship="MovieTickesDBModel.FK_ConfirmRegistrationKeys_ToUsers" FromRole="ConfirmRegistrationKeys" ToRole="User" />
+        </EntityType>
+        <Association Name="FK_ConfirmRegistrationKeys_ToUsers">
+          <End Type="MovieTickesDBModel.User" Role="User" Multiplicity="1" />
+          <End Type="MovieTickesDBModel.ConfirmRegistrationKeys" Role="ConfirmRegistrationKeys" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ConfirmRegistrationKeys">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Хранилище MovieTickesDBModelContainer" CdmEntityContainer="MovieTickesDBEntities">
+          <EntitySetMapping Name="Authentications">
+            <EntityTypeMapping TypeName="MovieTickesDBModel.Authentication">
+              <MappingFragment StoreEntitySet="Authentication">
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CinemaComments">
+            <EntityTypeMapping TypeName="MovieTickesDBModel.CinemaComment">
+              <MappingFragment StoreEntitySet="CinemaComments">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="CinemaId" ColumnName="CinemaId" />
+                <ScalarProperty Name="Comment" ColumnName="Comment" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CinemaRates">
+            <EntityTypeMapping TypeName="MovieTickesDBModel.CinemaRate">
+              <MappingFragment StoreEntitySet="CinemaRates">
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="CinemaId" ColumnName="CinemaId" />
+                <ScalarProperty Name="Rating" ColumnName="Rating" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Cinemas">
+            <EntityTypeMapping TypeName="MovieTickesDBModel.Cinema">
+              <MappingFragment StoreEntitySet="Cinemas">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FilmComments">
+            <EntityTypeMapping TypeName="MovieTickesDBModel.FilmComment">
+              <MappingFragment StoreEntitySet="FilmComments">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="FilmId" ColumnName="FilmId" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="Comment" ColumnName="Comment" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FilmRates">
+            <EntityTypeMapping TypeName="MovieTickesDBModel.FilmRate">
+              <MappingFragment StoreEntitySet="FilmRates">
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="FilmId" ColumnName="FilmId" />
+                <ScalarProperty Name="Rating" ColumnName="Rating" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Films">
+            <EntityTypeMapping TypeName="MovieTickesDBModel.Film">
+              <MappingFragment StoreEntitySet="Films">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Halls">
+            <EntityTypeMapping TypeName="MovieTickesDBModel.Hall">
+              <MappingFragment StoreEntitySet="Halls">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="CinemaId" ColumnName="CinemaId" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Schema" ColumnName="Schema" />
+                <ScalarProperty Name="VipCoef" ColumnName="VipCoef" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Roles">
+            <EntityTypeMapping TypeName="MovieTickesDBModel.Role">
+              <MappingFragment StoreEntitySet="Roles">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Seats">
+            <EntityTypeMapping TypeName="MovieTickesDBModel.Seat">
+              <MappingFragment StoreEntitySet="Seats">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="HallId" ColumnName="HallId" />
+                <ScalarProperty Name="Number" ColumnName="Number" />
+                <ScalarProperty Name="IsVip" ColumnName="IsVip" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Sessions">
+            <EntityTypeMapping TypeName="MovieTickesDBModel.Session">
+              <MappingFragment StoreEntitySet="Sessions">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="FilmId" ColumnName="FilmId" />
+                <ScalarProperty Name="HallId" ColumnName="HallId" />
+                <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+                <ScalarProperty Name="BasePrice" ColumnName="BasePrice" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TicketReserves">
+            <EntityTypeMapping TypeName="MovieTickesDBModel.TicketReserve">
+              <MappingFragment StoreEntitySet="TicketReserve">
+                <ScalarProperty Name="SeatId" ColumnName="SeatId" />
+                <ScalarProperty Name="SessionId" ColumnName="SessionId" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="MovieTickesDBModel.User">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="RegisterDate" ColumnName="RegisterDate" />
+                <ScalarProperty Name="Blocked" ColumnName="Blocked" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="Login" ColumnName="Login" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UsersToRoles">
+            <EntityTypeMapping TypeName="MovieTickesDBModel.UsersToRole">
+              <MappingFragment StoreEntitySet="UsersToRoles">
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ConfirmRegistrationKeys">
+            <EntityTypeMapping TypeName="MovieTickesDBModel.ConfirmRegistrationKeys">
+              <MappingFragment StoreEntitySet="ConfirmRegistrationKeys">
+                <ScalarProperty Name="Key" ColumnName="Key" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

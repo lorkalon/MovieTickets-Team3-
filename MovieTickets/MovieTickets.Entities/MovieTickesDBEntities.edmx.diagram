@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="eef235d1b29f41e594a028d12473a6c3" Name="Диаграмма1" ZoomLevel="87">
+        <EntityTypeShape EntityType="MovieTickesDBModel.Authentication" Width="1.5" PointX="10.5" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MovieTickesDBModel.CinemaComment" Width="1.5" PointX="3.125" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MovieTickesDBModel.CinemaRate" Width="1.5" PointX="3.125" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MovieTickesDBModel.Cinema" Width="1.5" PointX="0.75" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MovieTickesDBModel.FilmComment" Width="1.5" PointX="13" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MovieTickesDBModel.FilmRate" Width="1.5" PointX="12.875" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MovieTickesDBModel.Film" Width="1.5" PointX="15.125" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MovieTickesDBModel.Hall" Width="1.5" PointX="1.125" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MovieTickesDBModel.Role" Width="1.5" PointX="9.625" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MovieTickesDBModel.Seat" Width="1.5" PointX="3.375" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="MovieTickesDBModel.Session" Width="1.5" PointX="7.75" PointY="13.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MovieTickesDBModel.TicketReserve" Width="1.5" PointX="6.625" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MovieTickesDBModel.User" Width="1.5" PointX="8.5" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MovieTickesDBModel.UsersToRole" Width="1.5" PointX="6.875" PointY="1.875" IsExpanded="true" />
+        <AssociationConnector Association="MovieTickesDBModel.FK_Authentication_ToUsers" ManuallyRouted="false" />
+        <AssociationConnector Association="MovieTickesDBModel.FK_CinemaComments_ToCinema" ManuallyRouted="false" />
+        <AssociationConnector Association="MovieTickesDBModel.FK_CinemaComments_ToUser" ManuallyRouted="false" />
+        <AssociationConnector Association="MovieTickesDBModel.FK_CinemaRates_ToCinemas" ManuallyRouted="false" />
+        <AssociationConnector Association="MovieTickesDBModel.FK_CinemaRates_ToUsers" ManuallyRouted="false" />
+        <AssociationConnector Association="MovieTickesDBModel.FK_Halls_ToCinema" ManuallyRouted="false" />
+        <AssociationConnector Association="MovieTickesDBModel.FK_FilmComments_ToFilm" ManuallyRouted="false" />
+        <AssociationConnector Association="MovieTickesDBModel.FK_FilmComments_ToUser" ManuallyRouted="false" />
+        <AssociationConnector Association="MovieTickesDBModel.FK_FilmRates_ToFilm" ManuallyRouted="false" />
+        <AssociationConnector Association="MovieTickesDBModel.FK_FilmRates_ToUser" ManuallyRouted="false" />
+        <AssociationConnector Association="MovieTickesDBModel.FK_Sessions_Film" ManuallyRouted="false" />
+        <AssociationConnector Association="MovieTickesDBModel.FK_Seats_ToHall" ManuallyRouted="false" />
+        <AssociationConnector Association="MovieTickesDBModel.FK_Sessions_Hall" ManuallyRouted="false" />
+        <AssociationConnector Association="MovieTickesDBModel.FK_UsersToRoles_ToRoles" ManuallyRouted="false" />
+        <AssociationConnector Association="MovieTickesDBModel.FK_TicketReserve_ToSeat" ManuallyRouted="false" />
+        <AssociationConnector Association="MovieTickesDBModel.FK_TicketReserve_ToSession" ManuallyRouted="false" />
+        <AssociationConnector Association="MovieTickesDBModel.FK_TicketReserve_ToUser" ManuallyRouted="false" />
+        <AssociationConnector Association="MovieTickesDBModel.FK_UsersToRoles_ToUsers" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="MovieTickesDBModel.ConfirmRegistrationKeys" Width="1.5" PointX="10.25" PointY="9.25" />
+        <AssociationConnector Association="MovieTickesDBModel.FK_ConfirmRegistrationKeys_ToUsers" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

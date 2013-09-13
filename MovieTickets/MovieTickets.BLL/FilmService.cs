@@ -41,5 +41,29 @@ namespace MovieTickets.BLL
         {
             _filmRepository.Delete(item);
         }
+
+        private bool _isDisposed = false;
+        private void DoDispose(bool suppressFinilize)
+        {
+            if (!_isDisposed)
+            {
+                _isDisposed = true;
+                _filmRepository.Dispose();
+                if (suppressFinilize)
+                {
+                    GC.SuppressFinalize(this);
+                }
+            }
+        }
+
+        public void Dispose()
+        {
+            DoDispose(true);
+        }
+
+        ~FilmService()
+        {
+            DoDispose(false);
+        }
     }
 }

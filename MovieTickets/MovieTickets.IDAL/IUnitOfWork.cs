@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MovieTickets.IDAL
 {
-    public interface IUnitOfWork
+    public interface IUnitOfWork : IDisposable
     {
         //add IRepositor|Entity| GetIRepository|Entity| method to get repository for an entity
         
@@ -17,13 +17,14 @@ namespace MovieTickets.IDAL
         IFilmCommentRepository GetIFilmCommentRepository();
         IFilmRatingRepository GetIFilmRatingRepository();
         IHallRepository GetIHallRepository();
-        IMediaReferenceRepository GetIMediaReferenceRepository();
         IRoleRepository GetIRoleRepository();
         ISeatRepository GetISeatRepository();
         ISessionRepository GetISessionRepository();
         ITicketReserveRepository GetITicketReserveRepository();
         IUserRepository GetIUserRepository();
-        
+        IAuthenticationRepository GetIAuthenticationRepository();
+        IUsersToRoleRepository GetIUsersToRoleRepository();
+
         void Save();
     }
 }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using MovieTickets.DAL.Model;
+
 using MovieTickets.Entities;
 using MovieTickets.IDAL;
 
@@ -11,33 +11,36 @@ namespace MovieTickets.DAL.Repositories
 {
     class CinemaCommentRepository : BaseRepository, ICinemaCommentRepository
     {
-        public CinemaCommentRepository(DataBaseContext context) : base(context)
+        public CinemaCommentRepository(MovieTickesDBEntities context) : base(context)
         {
+
         }
 
-        public IQueryable<CinemaComment> GetAll()
+        public IEnumerable<CinemaComment> GetAll()
         {
-            throw new NotImplementedException();
+            return Context.CinemaComments;
         }
 
-        public CinemaComment GetById(object id)
+        public CinemaComment GetById(int id)
         {
-            throw new NotImplementedException();
+            return Context.CinemaComments.First(x => x.Id == id);
         }
 
         public void Insert(CinemaComment entity)
         {
-            throw new NotImplementedException();
+            Context.CinemaComments.Add(entity);
         }
 
         public void Update(CinemaComment entity)
         {
-            throw new NotImplementedException();
+            CinemaComment comment = Context.CinemaComments.First(x => x.Id == entity.Id);
+            comment.Comment = entity.Comment;
         }
 
         public void Delete(CinemaComment entity)
         {
-            throw new NotImplementedException();
+            CinemaComment comment = Context.CinemaComments.First(x => x.Id == entity.Id);
+            Context.CinemaComments.Remove(comment);
         }
     }
 }

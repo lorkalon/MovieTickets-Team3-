@@ -4,14 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MovieTickets.DAL.Repositories;
+using MovieTickets.Entities;
 using MovieTickets.IDAL;
-using MovieTickets.DAL.Model;
+
 
 namespace MovieTickets.DAL
 {
-    class UnitOfWork : IUnitOfWork, IDisposable
+    public class UnitOfWork : IUnitOfWork
     {
-        private DataBaseContext context = new DataBaseContext();
+        private MovieTickesDBEntities context = new MovieTickesDBEntities();
 
         public ICinemaRepository GetICinemaRepository()
         {
@@ -48,11 +49,6 @@ namespace MovieTickets.DAL
             return new HallRepository(context);
         }
 
-        public IMediaReferenceRepository GetIMediaReferenceRepository()
-        {
-            throw new NotImplementedException();
-        }
-
         public IRoleRepository GetIRoleRepository()
         {
             return new RoleRepository(context);
@@ -78,6 +74,15 @@ namespace MovieTickets.DAL
             return new UserRepository(context);
         }
 
+        public IAuthenticationRepository GetIAuthenticationRepository()
+        {
+            return new AuthenticationRepository(context);
+        }
+
+        public IUsersToRoleRepository GetIUsersToRoleRepository()
+        {
+            return new UsersToRoleRepository(context);
+        }
 
         public void Save()
         {

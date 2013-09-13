@@ -3,41 +3,47 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using MovieTickets.DAL.Model;
+
 using MovieTickets.IDAL;
 using MovieTickets.Entities;
+
 
 namespace MovieTickets.DAL.Repositories
 {
     class HallRepository : BaseRepository, IHallRepository
     {
-        public HallRepository(DataBaseContext context) : base(context)
+        public HallRepository(MovieTickesDBEntities context)
+            : base(context)
         {
         }
 
-        public IQueryable<Hall> GetAll()
+        public IEnumerable<Hall> GetAll()
         {
-            throw new NotImplementedException();
+            return Context.Halls;
         }
 
-        public Hall GetById(object id)
+        public Hall GetById(int id)
         {
-            throw new NotImplementedException();
+            return Context.Halls.First(x => x.Id == id);
         }
 
         public void Insert(Hall entity)
         {
-            throw new NotImplementedException();
+            Context.Halls.Add(entity);
         }
 
         public void Update(Hall entity)
         {
-            throw new NotImplementedException();
+            Hall hall = Context.Halls.First(x => entity.Id == x.Id);
+            hall.Schema = entity.Schema;
+            hall.VipCoef = entity.VipCoef;
+            hall.Description = entity.Description;
         }
 
         public void Delete(Hall entity)
         {
-            throw new NotImplementedException();
+            Hall hall = Context.Halls.First(x => x.Id == entity.Id);
+            Context.Halls.Remove(hall);
         }
     }
 }

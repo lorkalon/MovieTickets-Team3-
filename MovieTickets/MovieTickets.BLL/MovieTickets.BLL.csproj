@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccountService.cs" />
     <Compile Include="CinemaService.cs" />
     <Compile Include="FilmService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

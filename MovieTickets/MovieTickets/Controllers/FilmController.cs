@@ -22,9 +22,12 @@ namespace MovieTickets.Controllers
 
         public ActionResult ListOfFilms(int page = 1)
         {
-            IFilmService filmService = DependencyResolver.Current.GetService<IFilmService>();
-            ICollection<Film> films = filmService.GetAll().Skip((page - 1)*_pageSize).Take(_pageSize).ToArray();
-            return View(films);
+            ICollection<Film> films = null;
+            using (IFilmService filmService = DependencyResolver.Current.GetService<IFilmService>())
+            {
+                films = filmService.GetAll().Skip((page - 1)*_pageSize).Take(_pageSize).ToArray();
+            }
+            return View();   // films
         }
 
         public ActionResult FilmDetails(int filmId)

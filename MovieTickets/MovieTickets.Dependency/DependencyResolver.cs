@@ -35,6 +35,16 @@ namespace MovieTickets.Dependency
         private void AddBindings()    // Here must be all interfaces IDAL anad IBLL and their's implementations
         {
             _kernel.Bind<IFilmService>().To<FilmService>();
+            _kernel.Bind<IUnitOfWork>().To<UnitOfWork>();
+            _kernel.Bind<IAccountService>().To<AccountService>();
+        }
+
+        public IKernel GetKernel
+        {
+            get
+            {
+                return _kernel;
+            }
         }
     }
 }

@@ -9,8 +9,8 @@ namespace MovieTickets.IDAL
 {
     public interface IRepository<TEntity> : IDisposable where TEntity : class
     {
-        IQueryable<TEntity> GetAll();
-        TEntity GetById(object id);
+        IEnumerable<TEntity> GetAll();
+        TEntity GetById(int id);
         void Insert(TEntity entity);
         void Update(TEntity entity);
         void Delete(TEntity entity);
@@ -28,7 +28,7 @@ namespace MovieTickets.IDAL
 
     }
 
-    public interface ICinemaRatingRepository : IRepository<CinemaRating>
+    public interface ICinemaRatingRepository : IRepository<CinemaRate>
     {
 
     }
@@ -43,17 +43,12 @@ namespace MovieTickets.IDAL
 
     }
 
-    public interface IFilmRatingRepository : IRepository<FilmRating>
+    public interface IFilmRatingRepository : IRepository<FilmRate>
     {
 
     }
 
     public interface IHallRepository : IRepository<Hall>
-    {
-
-    }
-
-    public interface IMediaReferenceRepository : IRepository<MediaReference>
     {
 
     }
@@ -80,6 +75,14 @@ namespace MovieTickets.IDAL
 
     public interface IUserRepository : IRepository<User>
     {
+        User GetByEmail(string email);
+    }
 
+    public interface IUsersToRoleRepository : IRepository<UsersToRole>
+    {
+    }
+
+    public interface IAuthenticationRepository : IRepository<Authentication>
+    {
     }
 }
